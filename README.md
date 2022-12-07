@@ -4,7 +4,7 @@ Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-t
 
 Competitions - [Aicup_drone-2022](https://tbrain.trendmicro.com.tw/Competitions/Details/25)
 
-<img src="./figure/performance.png" height="480">
+<img src="./figure/img10011.png" height="480">
 
 ## Web Demo
 
