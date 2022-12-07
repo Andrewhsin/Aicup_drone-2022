@@ -21,11 +21,15 @@ Competitions - [Aicup_drone-2022](https://tbrain.trendmicro.com.tw/Competitions/
 ├── train.txt               轉檔後的訓練標籤檔
 ├── val.txt                 轉檔後的驗證標籤檔
 ├── train.py                執行訓練及其他參數調整
-├── training                預設訓練及驗證圖片資料夾 
+├── runs
+│   ├── train               存放訓練權重資料夾
+│   ├── detect              存放 public & private 輸出資料夾 
+│   └── save                存放 public & private .csv 輸出資料夾 
+│
 ├── log                     訓練loss可視化(tensorboard)
-├── checkpoint              儲存每個epoch的權重檔
-├── yolov4.conv.137.pth     YOLOv4 pretrained model
-├── yolov4-csp.conv.142.pth Scaled YOLOv4 pretrained model   
+├── wandb                   訓練loss可視化(wandb)
+├── yolov7.pt               YOLOv7 pretrained model
+├── yolov7_w6.pt            YOLOv7_w6 pretrained model   
 
 主要測試程式碼
 
