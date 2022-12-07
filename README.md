@@ -41,16 +41,6 @@ python train.py --workers 8 --device 0 --batch-size 32 --data data/coco.yaml --i
 
 `python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inference/images/horses.jpg`
 
-## Citation
-
-```
-@article{wang2022yolov7,
-  title={{YOLOv7}: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors},
-  author={Wang, Chien-Yao and Bochkovskiy, Alexey and Liao, Hong-Yuan Mark},
-  journal={arXiv preprint arXiv:2207.02696},
-  year={2022}
-}
-```
 
 
 ## Acknowledgements
