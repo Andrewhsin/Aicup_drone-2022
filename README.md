@@ -89,7 +89,7 @@ The re-parameterization code and instruction will release soon.
 
 ## Inference
 
-`python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inference/images/horses.jpg`
+`python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inference/`
 
 <img src="./figure/img1001.png" height="480">
 
