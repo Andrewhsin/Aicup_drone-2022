@@ -1,0 +1,12 @@
+2022-12-03 06:44:55,066 INFO    StreamThr :3036 [internal.py:wandb_internal():88] W&B internal server running at pid: 3036, started at: 2022-12-03 06:44:55.066614
+2022-12-03 06:44:55,069 DEBUG   HandlerThread:3036 [handler.py:handle_request():138] handle_request: status
+2022-12-03 06:44:55,073 DEBUG   SenderThread:3036 [sender.py:send_request():317] send_request: status
+2022-12-03 06:44:55,077 INFO    WriterThread:3036 [datastore.py:open_for_write():75] open: E:\yolov7-main\wandb\offline-run-20221203_064455-1j6qwh6c\run-1j6qwh6c.wandb
+2022-12-03 06:44:55,078 DEBUG   HandlerThread:3036 [handler.py:handle_request():138] handle_request: run_start
+2022-12-03 06:44:55,112 DEBUG   HandlerThread:3036 [meta.py:__init__():34] meta init
+2022-12-03 06:44:55,112 DEBUG   HandlerThread:3036 [meta.py:__init__():49] meta init done
+2022-12-03 06:44:55,112 DEBUG   HandlerThread:3036 [meta.py:probe():215] probe
+2022-12-03 06:44:55,133 DEBUG   HandlerThread:3036 [git.py:repo():40] git repository is invalid
+2022-12-03 06:44:55,133 DEBUG   HandlerThread:3036 [meta.py:_save_pip():53] save pip
+2022-12-03 06:44:55,134 DEBUG   HandlerThread:3036 [meta.py:_save_pip():67] save pip done
+2022-12-03 06:44:55,134 DEBUG   HandlerThread:3036 [meta.py:probe():253] probe done

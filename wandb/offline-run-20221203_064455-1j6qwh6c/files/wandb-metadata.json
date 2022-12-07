@@ -1,0 +1,18 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.9.0",
+    "heartbeatAt": "2022-12-02T22:44:55.112490",
+    "startedAt": "2022-12-02T22:44:55.039730",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "cpu_count": 20,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "E:\\yolov7-main\\train_aux.py",
+    "codePath": "train_aux.py",
+    "host": "DESKTOP-QAOCG93",
+    "username": "andrew",
+    "executable": "C:\\Program Files\\Python39\\python.exe"
+}
