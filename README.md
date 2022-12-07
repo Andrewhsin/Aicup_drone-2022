@@ -1,10 +1,59 @@
 # Aicup_drone-2022 無人機飛行載具之智慧計數競賽
 
+## 指導教授: 劉宗榮  
+
+## 隊名: TEAM_2060
+
+## 組員: [黃裕芳](https://github.com/Andrewhsin), 蘇郁宸, 林峻安, 陳柏偉, 賴庭旭  
+
 Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)
 
 Competitions - [Aicup_drone-2022](https://tbrain.trendmicro.com.tw/Competitions/Details/25)
 
 <img src="./figure/img10011.png" height="480">
+
+```
+├── README.md    
+
+主要訓練程式碼
+├── cfg.py                  訓練相關參數
+├── make_txt.py             把主辦單位給的csv轉成相關格式
+├── train.txt               轉檔後的訓練標籤檔
+├── val.txt                 轉檔後的驗證標籤檔
+├── train.py                執行訓練及其他參數調整
+├── training                預設訓練及驗證圖片資料夾 
+├── log                     訓練loss可視化(tensorboard)
+├── checkpoint              儲存每個epoch的權重檔
+├── yolov4.conv.137.pth     YOLOv4 pretrained model
+├── yolov4-csp.conv.142.pth Scaled YOLOv4 pretrained model   
+
+主要測試程式碼   
+├── TestResult.py           測試水稻
+├── test_cfg.yaml           設定測試水稻參數      
+├── dataset.py              讀檔轉檔
+├── classify.py             MLP分類器  
+├── TestMask.py             U-Net產生Type0 mask
+├── testingType0            產生Type0 mask用
+├── testing                 預設測試圖片資料夾
+├── tool
+│   ├── coco_annotation.py
+│   ├── config.py
+│   ├── darknet2pytorch.py
+│   ├── region_loss.py
+│   ├── utils.py
+│   └── yolo_layer.py
+├── TypeX_model             對應不同type的model
+│   ├── Best AP_(第x個epoch)x(資料增強倍數).pth
+│   ├── ...
+├── Result                  測試結果圖及對應csv
+
+```
+
+
+
+
+
+
 
 ## Web Demo
 
