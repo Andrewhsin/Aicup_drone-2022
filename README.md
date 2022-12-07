@@ -102,6 +102,17 @@ To measure accuracy, download [COCO-annotations for Pycocotools](http://images.c
 
 ## Training
 
+1. 準備Ground truth label (`train.txt`/`val.txt`)  
+   並將訓練圖片放入training資料夾，label格式如下
+    ```
+    E:/Aicup_drone/image_path/train/images/img10001.jpg
+    E:/Aicup_drone/image_path/train/images/img10002.jpg
+    E:/Aicup_drone/image_path/train/images/img10003.jpg
+    E:/Aicup_drone/image_path/train/images/img10004.jpg
+    ...
+    ```
+
+
 Single GPU training
 
 ```
@@ -118,19 +129,34 @@ python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.p
 python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 128 --data data/coco.yaml --img 640 640 --cfg cfg/training/yolov7x.yaml --weights '' --name yolov7x --hyp data/hyp.scratch.p5.yaml
 ```
 
-The training code and instruction of p6 models will release soon.
-
-Download MS COCO dataset images ([train](http://images.cocodataset.org/zips/train2017.zip), [val](http://images.cocodataset.org/zips/val2017.zip), [test](http://images.cocodataset.org/zips/test2017.zip)) and [labels](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/coco2017labels-segments.zip). If you have previously used a different version of YOLO, we strongly recommend that you delete `train2017.cache` and `val2017.cache` files, and redownload [labels](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/coco2017labels-segments.zip) 
-
 ## Re-parameterization
 
 The re-parameterization code and instruction will release soon.
 
 ## Inference
 
+## 1.1 相關測試參數設定
+1. [AI CUP 競賽報告](https://drive.google.com/file/d/1puLpWeq7S_aKfyerbI9787HfJ-Fl19_l/view?usp=sharing)  
+2. [AI CUP 實驗記錄](https://drive.google.com/file/d/1tNn-kyzaWkC-EPw4iEtFYSf3xShvJVQq/view?usp=sharing)  
+3. [Public data](https://drive.google.com/drive/folders/1lx4rOFNm1ayZOFxhmhru6AoiEg05JO4O?usp=sharing)
+4. [Private data](https://drive.google.com/drive/folders/1n52IcT7IGtNQ5OG2wetj__WAki9ajiRO?usp=sharing)
+5. 測試時不需要更改相關路徑，只須確定所有相對路徑是否有圖片  
+6. 測試時所有更改參數的地方都在`test_cfg.yaml`進行更改  
+7. 預設測試資料路徑: `./testing`
+8. 預設測試結果路徑: `./Result`
+
 `python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inference/`
 
 <img src="./figure/img1001.png" height="480">
+
+
+## 2.2 測試分數
+- 我們每次上傳分數都會留下當次測試的參數細節、偵測結果圖與測試分數  
+  (https://drive.google.com/drive/folders/1EZeyRFDi9dmy7UYNcRN06V7a6xarPK2G?usp=sharing)  
+  p.s. 整體檔案大小31G 上面分享網址只包含最後一次更新分數計算的每次測試結果資料  
+       若有需要可以聯絡我們 再把所有完整檔案分批傳送
+
+
 
 ## Citation
 
