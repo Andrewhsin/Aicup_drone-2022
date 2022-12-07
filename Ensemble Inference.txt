@@ -1,0 +1,1 @@
+python detect.py --weights yolov7.pt yolov7_e6e_38.pt --augment --img-size 2048 --conf-thres 0.29 --iou-thres 0.26 --save-txt

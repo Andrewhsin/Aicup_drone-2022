@@ -1,0 +1,4 @@
+Run `wandb offline` to turn off syncing.
+
+
+wandb online
