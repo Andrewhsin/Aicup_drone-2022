@@ -27,25 +27,10 @@ Competitions - [Aicup_drone-2022](https://tbrain.trendmicro.com.tw/Competitions/
 ├── yolov4.conv.137.pth     YOLOv4 pretrained model
 ├── yolov4-csp.conv.142.pth Scaled YOLOv4 pretrained model   
 
-主要測試程式碼   
-├── TestResult.py           測試水稻
-├── test_cfg.yaml           設定測試水稻參數      
-├── dataset.py              讀檔轉檔
-├── classify.py             MLP分類器  
-├── TestMask.py             U-Net產生Type0 mask
-├── testingType0            產生Type0 mask用
-├── testing                 預設測試圖片資料夾
-├── tool
-│   ├── coco_annotation.py
-│   ├── config.py
-│   ├── darknet2pytorch.py
-│   ├── region_loss.py
-│   ├── utils.py
-│   └── yolo_layer.py
-├── TypeX_model             對應不同type的model
-│   ├── Best AP_(第x個epoch)x(資料增強倍數).pth
-│   ├── ...
-├── Result                  測試結果圖及對應csv
+主要測試程式碼
+
+├── detect.py               輸出 public & private 資料集
+├── classify.py             將 public & private 資料集結果轉為.csv  
 
 ```
 
