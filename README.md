@@ -4,7 +4,7 @@
 
 ## 隊名: TEAM_2060
 
-## 隊長 : [黃裕芳](https://github.com/Andrewhsin)  組員: 蘇郁宸, 林峻安, [陳柏偉](https://github.com/bobo0303), 賴庭旭  
+## 隊長 : [黃裕芳](https://github.com/Andrewhsin)  組員: 蘇郁宸, 林峻安, [陳柏瑋](https://github.com/bobo0303), 賴庭旭  
 
 Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)
 
