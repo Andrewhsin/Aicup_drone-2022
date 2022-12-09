@@ -1,4 +1,4 @@
-weights: E:/yolov7-main/runs/train/exp64/weights/last.pt
+weights: E:/yolov7-main/runs/train/exp/weights/last.pt
 cfg: E:/yolov7-main/cfg/training/yolov7.yaml
 data: data/aicup_new.yaml
 hyp: data/hyp.scratch.p6.yaml
