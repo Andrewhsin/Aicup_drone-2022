@@ -73,33 +73,6 @@ cd /yolov7
 
 </details>
 
-## Testing
-
-[`yolov7.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt) [`yolov7x.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt) [`yolov7-w6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-w6.pt) [`yolov7-e6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6.pt) [`yolov7-d6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-d6.pt) [`yolov7-e6e.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6e.pt)
-
-```
-python test.py --data data/coco.yaml --img 640 --batch 32 --conf 0.001 --iou 0.65 --device 0 --weights yolov7.pt --name yolov7_640_val
-```
-
-You will get the results:
-
-```
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.51206
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.69730
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.55521
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.35247
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.55937
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.66693
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.38453
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.63765
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.68772
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.53766
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.73549
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.83868
-```
-
-To measure accuracy, download [COCO-annotations for Pycocotools](http://images.cocodataset.org/annotations/annotations_trainval2017.zip).
-
 ## Training
 
 1. 準備Ground truth label (`train.txt`/`val.txt`)  
@@ -129,10 +102,6 @@ python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.p
 python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 128 --data data/coco.yaml --img 640 640 --cfg cfg/training/yolov7x.yaml --weights '' --name yolov7x --hyp data/hyp.scratch.p5.yaml
 ```
 
-## Re-parameterization
-
-The re-parameterization code and instruction will release soon.
-
 ## Inference
 
 ## 1.1 相關測試參數設定
@@ -140,10 +109,10 @@ The re-parameterization code and instruction will release soon.
 2. [AI CUP 實驗記錄](https://drive.google.com/file/d/1tNn-kyzaWkC-EPw4iEtFYSf3xShvJVQq/view?usp=sharing)  
 3. [Public data](https://drive.google.com/drive/folders/1lx4rOFNm1ayZOFxhmhru6AoiEg05JO4O?usp=sharing)
 4. [Private data](https://drive.google.com/drive/folders/1n52IcT7IGtNQ5OG2wetj__WAki9ajiRO?usp=sharing)
-5. 測試時不需要更改相關路徑，只須確定所有相對路徑是否有圖片  
-6. 測試時所有更改參數的地方都在`test_cfg.yaml`進行更改  
-7. 預設測試資料路徑: `./testing`
-8. 預設測試結果路徑: `./Result`
+5. 測試時不需要更改相關路徑，只須確定所有相對路徑內是否有圖片即可  
+6. 測試時所有更改參數的地方都在`名稱.yaml`進行更改  
+7. 預設測試資料路徑: `./inference/images/`
+8. 預設測試結果路徑: `./runs/detect/`
 
 `python detect.py --weights yolov7.pt --conf 0.25 --img-size 640 --source inference/`
 
@@ -152,9 +121,7 @@ The re-parameterization code and instruction will release soon.
 
 ## 2.2 測試分數
 - 我們每次上傳分數都會留下當次測試的參數細節、偵測結果圖與測試分數  
-  (https://drive.google.com/drive/folders/1EZeyRFDi9dmy7UYNcRN06V7a6xarPK2G?usp=sharing)  
-  p.s. 整體檔案大小31G 上面分享網址只包含最後一次更新分數計算的每次測試結果資料  
-       若有需要可以聯絡我們 再把所有完整檔案分批傳送
+  若有需要可以聯絡我們 再把所有完整檔案分批傳送
 
 
 
