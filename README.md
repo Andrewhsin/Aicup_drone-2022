@@ -16,15 +16,25 @@ Competitions - [Aicup_drone-2022](https://tbrain.trendmicro.com.tw/Competitions/
 ├── README.md    
 
 主要訓練程式碼
-├── cfg.py                  訓練相關參數
+├── runs
+│   ├── train               存放訓練權重資料夾
+│   ├── detect              存放 public & private 輸出資料夾 
+│   └── save                存放 public & private .csv 輸出資料夾 
 ├── make_txt.py             把主辦單位給的csv轉成相關格式
-├── train.txt               轉檔後的訓練標籤檔
-├── val.txt                 轉檔後的驗證標籤檔
+├── 目標數據集
+│   ├── train.txt           轉檔後的訓練標籤檔
+│   ├── val.txt             轉檔後的驗證標籤檔 
+│   ├── train               存放 train 的 image & labels 資料夾
+│   └── save                存放 val 的 image & labels 資料夾
 ├── train.py                執行訓練及其他參數調整
 ├── runs
 │   ├── train               存放訓練權重資料夾
 │   ├── detect              存放 public & private 輸出資料夾 
 │   └── save                存放 public & private .csv 輸出資料夾 
+├── data_arg
+│   ├── ENSEMBLE            不同模型 & csv 結合
+│   ├── AUGMENTATION_       資料擴增、翻轉、旋轉       
+│   └── PSUEDO_LABEL        將輸出結果 PSUEDO_LABEL
 │
 ├── log                     訓練loss可視化(tensorboard)
 ├── wandb                   訓練loss可視化(wandb)
@@ -34,7 +44,7 @@ Competitions - [Aicup_drone-2022](https://tbrain.trendmicro.com.tw/Competitions/
 主要測試程式碼
 
 ├── detect.py               輸出 public & private 資料集
-├── classify.py             將 public & private 資料集結果轉為.csv  
+├── csv_output.py             將 public & private 資料集結果轉為.csv  
 
 ```
 
