@@ -122,6 +122,8 @@ python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train.p
 ## 2.2 測試分數
 - 我們每次上傳分數都會留下當次測試的參數細節、偵測結果圖與測試分數  
   若有需要可以聯絡我們 再把所有完整檔案分批傳送
+  
+  <img src="./figure/203.png" height="480">
 
 
 
