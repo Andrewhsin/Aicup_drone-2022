@@ -1,0 +1,10 @@
+# train and val datasets (image directory or *.txt file with image paths)
+train: E:/yolov7-main/aicup_psu/train/ # 118k images
+val:  E:/yolov7-main/aicup_psu/val/ # 5k images
+test: E:/yolor-main/TT100K/data/test/  # 20k images for submission to https://competitions.codalab.org/competitions/20794
+
+# number of classes
+nc: 4
+
+# class names
+names: ['car', 'hov', 'person', 'motorcycle' ]
